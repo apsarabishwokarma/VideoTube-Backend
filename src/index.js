@@ -1,12 +1,12 @@
 import express from "express";
 import config from "./config/config.js";
 import unknownEndPoint from "./middleware/unknownEndpoint.middleware.js";
-import connectDB from "./config/db.js";
+import connectDB from "./config/db.connection.js";
 
 const app = express();
 app.use(express.json());
 
-connectDB;
+connectDB();
 
 app.use(unknownEndPoint);
 
