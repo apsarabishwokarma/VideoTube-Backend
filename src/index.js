@@ -10,6 +10,8 @@ connectDB();
 
 app.use(unknownEndPoint);
 
+console.log(`PORT = ${config.PORT}`);
+
 app.listen(config.PORT, () => {
   console.log(`Server running at port ${config.PORT}`);
 });
