@@ -1,10 +1,6 @@
-import express from "express";
+import app from "./app.js";
 import config from "./config/config.js";
-import unknownEndPoint from "./middleware/unknownEndpoint.middleware.js";
 import connectDB from "./config/db.connection.js";
-
-const app = express();
-app.use(express.json());
 
 connectDB()
   //this is async function so it returns promise so we can use then and catch
@@ -22,5 +18,3 @@ connectDB()
     // to catch the error while connecting with db
     console.log("MONGODB CONNECTION FAILED !", err);
   });
-
-app.use(unknownEndPoint);
