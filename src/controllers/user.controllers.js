@@ -34,18 +34,28 @@ const registerUser = asyncHandler(async (req, res) => {
   //   res.status(400).json({ message: "User already exists" });
   // }
 
-  const existedUser = User.findOne({ $or: [{ email }, { username }] });
+  const existedUser = await User.findOne({ $or: [{ email }, { username }] });
   if (existedUser) {
     throw new ApiError(
       409,
       "user with this email and username is already exists"
     );
   }
+  console.log(existedUser);
 
   //to handle the images
   // multer is in middleware it gives us files from req
   const avatarLocalFilePath = req.files?.avatar[0]?.path; // first property inside we get path object
-  const coverImageLocalFilePath = req.files?.coverImage[0].path;
+  // const coverImageLocalFilePath = req.files?.coverImage[0].path;
+  let coverImageLocalFilePath;
+  if (
+    req.files &&
+    Array.isArray(req.files.coverImage) &&
+    req.files.coverImage.length > 0
+  ) {
+    coverImageLocalFilePath = req.files.coverImage[0].path;
+  }
+
   console.log(req.files);
 
   if (!avatarLocalFilePath) {

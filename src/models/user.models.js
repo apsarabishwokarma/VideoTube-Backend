@@ -1,31 +1,32 @@
 import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
-import config from "../config/config";
+import config from "../config/config.js";
+import bcrypt from "bcrypt";
 const userSchema = new mongoose.Schema(
   {
-    userName: {
+    username: {
       type: String,
-      required: [true, "userName is required"],
-      unique: true,
-      lowercase: true,
+      required: [true, "username is required"],
+      unique: [true, "this username is already taken"],
+      lowercase: [true, "username should be in lowercase"],
       trim: true,
       index: true,
     },
     email: {
       type: String,
-      required: true,
-      unique: true,
-      lowercase: true,
+      required: [true, "email is required"],
+      unique: [true, "this email is already exist"],
+      lowercase: [true, "email should be in lowercase"],
       trim: true,
     },
     fullName: {
       type: String,
-      required: [true, "userName is required"],
+      required: [true, "fullname is required"],
       trim: true,
       index: true,
     },
     avatar: {
-      type: String, //cloudinary url
+      type: String, //clCoudinary url
       required: true,
     },
     coverImage: {
@@ -51,8 +52,8 @@ const userSchema = new mongoose.Schema(
 );
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
-  this.password = await bcrypt.hash(this.password);
-  next();
+  this.password = await bcrypt.hash(this.password, 10);
+  // next();
 });
 
 userSchema.methods.isPasswordCorrect = async function (password) {
@@ -63,7 +64,7 @@ userSchema.methods.generateAccessToken = function () {
   const AccessToken = jwt.sign(
     {
       _id: this._id,
-      userName: this.userName,
+      username: this.username,
       fullName: this.fullName,
       email: this.email,
     },
