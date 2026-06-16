@@ -51,7 +51,7 @@ const userSchema = new mongoose.Schema(
 );
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
-  this.password = bcrypt.hash(this.password);
+  this.password = await bcrypt.hash(this.password);
   next();
 });
 
@@ -85,3 +85,15 @@ userSchema.methods.generateRefreshToken = function () {
 };
 
 export const User = mongoose.model("User", userSchema);
+
+// const User = mongoose.model("User", userSchema);
+
+// userSchema.set("toJSON", {
+//   transform: (document, returnedObj) => {
+//     returnedObj.id = returnedObj._id.toString();
+//     delete returnedObj._id;
+//     delete returnedObj.__v;
+//   },
+// });
+
+// export default User;
