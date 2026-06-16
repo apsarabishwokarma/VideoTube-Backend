@@ -85,7 +85,26 @@ userSchema.methods.generateRefreshToken = function () {
   return RefreshToken;
 };
 
+const generateAccessAndRefreshTokens = async (userId) => {
+  try {
+    const user = await User.findById(userId);
+    const accessToken = user.generateAccessToken();
+    const refreshToken = user.generateRefreshToken();
+    //saving refresh token in database
+    user.refreshToken = refreshToken;
+    await user.save({ validateBeforeSave: false });
+
+    //returning access token
+    return { accessToken, refreshToken };
+  } catch {
+    throw new ApiError(
+      500,
+      "something went wrong while generating access and refresh token"
+    );
+  }
+};
 export const User = mongoose.model("User", userSchema);
+export default generateAccessAndRefreshTokens;
 
 // const User = mongoose.model("User", userSchema);
 
