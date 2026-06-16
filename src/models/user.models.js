@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 import config from "../config/config.js";
 import bcrypt from "bcrypt";
+import ApiError from "../utils/ApiError.js";
 const userSchema = new mongoose.Schema(
   {
     username: {
@@ -50,10 +51,9 @@ const userSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
-userSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) return next();
+userSchema.pre("save", async function () {
+  if (!this.isModified("password")) return;
   this.password = await bcrypt.hash(this.password, 10);
-  // next();
 });
 
 userSchema.methods.isPasswordCorrect = async function (password) {
@@ -96,7 +96,9 @@ const generateAccessAndRefreshTokens = async (userId) => {
 
     //returning access token
     return { accessToken, refreshToken };
-  } catch {
+  } catch (error) {
+    console.log("TOKEN ERROR:", error);
+
     throw new ApiError(
       500,
       "something went wrong while generating access and refresh token"
@@ -105,15 +107,3 @@ const generateAccessAndRefreshTokens = async (userId) => {
 };
 export const User = mongoose.model("User", userSchema);
 export default generateAccessAndRefreshTokens;
-
-// const User = mongoose.model("User", userSchema);
-
-// userSchema.set("toJSON", {
-//   transform: (document, returnedObj) => {
-//     returnedObj.id = returnedObj._id.toString();
-//     delete returnedObj._id;
-//     delete returnedObj.__v;
-//   },
-// });
-
-// export default User;
