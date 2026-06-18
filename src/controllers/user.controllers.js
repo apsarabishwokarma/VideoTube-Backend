@@ -249,11 +249,13 @@ const changeCurrentPassword = asyncHandler(async (req, res) => {
   // here since in model if password modified then we are hashing and save
   return res
     .status(200)
-    .json(new ApiResponse(200), {}, "Password Changed Successfully");
+    .json(new ApiResponse(200, {}, "Password Changed Successfully"));
 });
 
 const getCurrentUser = asyncHandler(async (req, res) => {
-  return res.status(200).json(req.user, "current user fetched successfully");
+  return res
+    .status(200)
+    .json(new ApiResponse(200, req.user, "current user fetched successfully"));
 });
 const updateAccountDetails = asyncHandler(async (req, res) => {
   const { fullName, email } = req.body;
