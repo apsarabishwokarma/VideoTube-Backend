@@ -161,8 +161,13 @@ const logoutUser = async (req, res) => {
   User.findByIdAndUpdate(
     req.user._id,
     {
-      $set: {
-        refreshToken: undefined,
+      // $set: {
+      //   refreshToken: undefined,
+      //or
+      //   refreshToken: null,
+      // },
+      $unset: {
+        refreshToken: 1, // this removes the field from document
       },
     },
     {
