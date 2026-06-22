@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const tweetsSchema = new mongoose.Schema(
   {
     owner: {
-      type: mongoose.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
 
