@@ -1,0 +1,33 @@
+import mongoose, { isValidObjectId } from "mongoose";
+import { Tweet } from "../models/tweets.models.js";
+import { ApiError } from "../utils/ApiError.js";
+import { ApiResponse } from "../utils/ApiResponse.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
+
+const createTweet = asyncHandler(async (req, res) => {
+  //TODO: create tweet
+});
+
+const getUserTweets = asyncHandler(async (req, res) => {
+  if (!req.user?._id) {
+    throw new ApiError(401, "Unauthorized request");
+  }
+
+  const tweets = await Tweet.find({ owner: req.user._id })
+    .sort({ createdAt: -1 })
+    .lean();
+
+  return res
+    .status(200)
+    .json(new ApiResponse(200, tweets, "user tweets fetched successfully"));
+});
+
+const updateTweet = asyncHandler(async (req, res) => {
+  //TODO: update tweet
+});
+
+const deleteTweet = asyncHandler(async (req, res) => {
+  //TODO: delete tweet
+});
+
+export { createTweet, getUserTweets, updateTweet, deleteTweet };
