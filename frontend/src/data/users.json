@@ -1,0 +1,182 @@
+[
+  {
+    "_id": "64a000000000000000000101",
+    "username": "wanderlens",
+    "email": "hello@wanderlens.example.com",
+    "fullName": "Wanderlens",
+    "avatar": "/images/avatars/channel-1.svg",
+    "coverImage": "/images/covers/channel-1.svg",
+    "watchHistory": [],
+    "createdAt": "2023-01-12T09:00:00.000Z",
+    "updatedAt": "2023-01-12T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000102",
+    "username": "brewtheory",
+    "email": "hello@brewtheory.example.com",
+    "fullName": "Brew Theory",
+    "avatar": "/images/avatars/channel-2.svg",
+    "coverImage": "/images/covers/channel-2.svg",
+    "watchHistory": [],
+    "createdAt": "2023-01-14T09:00:00.000Z",
+    "updatedAt": "2023-01-14T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000103",
+    "username": "particleminds",
+    "email": "hello@particleminds.example.com",
+    "fullName": "Particle Minds",
+    "avatar": "/images/avatars/channel-3.svg",
+    "coverImage": "/images/covers/channel-3.svg",
+    "watchHistory": [],
+    "createdAt": "2023-01-16T09:00:00.000Z",
+    "updatedAt": "2023-01-16T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000104",
+    "username": "nightfreq",
+    "email": "hello@nightfreq.example.com",
+    "fullName": "NightFreq",
+    "avatar": "/images/avatars/channel-4.svg",
+    "coverImage": "/images/covers/channel-4.svg",
+    "watchHistory": [],
+    "createdAt": "2023-01-18T09:00:00.000Z",
+    "updatedAt": "2023-01-18T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000105",
+    "username": "offgridnorth",
+    "email": "hello@offgridnorth.example.com",
+    "fullName": "Off Grid North",
+    "avatar": "/images/avatars/channel-5.svg",
+    "coverImage": "/images/covers/channel-5.svg",
+    "watchHistory": [],
+    "createdAt": "2023-01-20T09:00:00.000Z",
+    "updatedAt": "2023-01-20T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000106",
+    "username": "apexracing",
+    "email": "hello@apexracing.example.com",
+    "fullName": "Apex Racing",
+    "avatar": "/images/avatars/channel-6.svg",
+    "coverImage": "/images/covers/channel-6.svg",
+    "watchHistory": [],
+    "createdAt": "2023-01-22T09:00:00.000Z",
+    "updatedAt": "2023-01-22T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000107",
+    "username": "plated",
+    "email": "hello@plated.example.com",
+    "fullName": "Plated",
+    "avatar": "/images/avatars/channel-7.svg",
+    "coverImage": "/images/covers/channel-7.svg",
+    "watchHistory": [],
+    "createdAt": "2023-01-24T09:00:00.000Z",
+    "updatedAt": "2023-01-24T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000108",
+    "username": "oceandepth",
+    "email": "hello@oceandepth.example.com",
+    "fullName": "OceanDepth",
+    "avatar": "/images/avatars/channel-8.svg",
+    "coverImage": "/images/covers/channel-8.svg",
+    "watchHistory": [],
+    "createdAt": "2023-01-26T09:00:00.000Z",
+    "updatedAt": "2023-01-26T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000109",
+    "username": "formfactor",
+    "email": "hello@formfactor.example.com",
+    "fullName": "FormFactor",
+    "avatar": "/images/avatars/channel-9.svg",
+    "coverImage": "/images/covers/channel-9.svg",
+    "watchHistory": [],
+    "createdAt": "2023-01-28T09:00:00.000Z",
+    "updatedAt": "2023-01-28T09:00:00.000Z"
+  },
+  {
+    "_id": "64a00000000000000000010a",
+    "username": "craftremains",
+    "email": "hello@craftremains.example.com",
+    "fullName": "Craft Remains",
+    "avatar": "/images/avatars/channel-10.svg",
+    "coverImage": "/images/covers/channel-10.svg",
+    "watchHistory": [],
+    "createdAt": "2023-01-30T09:00:00.000Z",
+    "updatedAt": "2023-01-30T09:00:00.000Z"
+  },
+  {
+    "_id": "64a0000000000000000001f0",
+    "username": "guest",
+    "email": "guest@videotube.example.com",
+    "fullName": "Guest User",
+    "avatar": "/images/avatars/default-user.svg",
+    "watchHistory": [],
+    "createdAt": "2023-02-01T09:00:00.000Z",
+    "updatedAt": "2023-02-01T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000201",
+    "username": "marcus_films",
+    "email": "marcus_films@example.com",
+    "fullName": "Marcus Films",
+    "avatar": "/images/avatars/user-1.svg",
+    "watchHistory": [],
+    "createdAt": "2023-03-01T09:00:00.000Z",
+    "updatedAt": "2023-03-01T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000202",
+    "username": "solene_r",
+    "email": "solene_r@example.com",
+    "fullName": "Solene R",
+    "avatar": "/images/avatars/user-2.svg",
+    "watchHistory": [],
+    "createdAt": "2023-03-01T09:00:00.000Z",
+    "updatedAt": "2023-03-01T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000203",
+    "username": "tech_wanderer",
+    "email": "tech_wanderer@example.com",
+    "fullName": "Tech Wanderer",
+    "avatar": "/images/avatars/user-3.svg",
+    "watchHistory": [],
+    "createdAt": "2023-03-01T09:00:00.000Z",
+    "updatedAt": "2023-03-01T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000204",
+    "username": "aria_k",
+    "email": "aria_k@example.com",
+    "fullName": "Aria K",
+    "avatar": "/images/avatars/user-4.svg",
+    "watchHistory": [],
+    "createdAt": "2023-03-01T09:00:00.000Z",
+    "updatedAt": "2023-03-01T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000205",
+    "username": "devon_p",
+    "email": "devon_p@example.com",
+    "fullName": "Devon P",
+    "avatar": "/images/avatars/user-5.svg",
+    "watchHistory": [],
+    "createdAt": "2023-03-01T09:00:00.000Z",
+    "updatedAt": "2023-03-01T09:00:00.000Z"
+  },
+  {
+    "_id": "64a000000000000000000206",
+    "username": "nina_ocean",
+    "email": "nina_ocean@example.com",
+    "fullName": "Nina Ocean",
+    "avatar": "/images/avatars/user-6.svg",
+    "watchHistory": [],
+    "createdAt": "2023-03-01T09:00:00.000Z",
+    "updatedAt": "2023-03-01T09:00:00.000Z"
+  }
+]
